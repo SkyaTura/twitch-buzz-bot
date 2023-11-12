@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  bot:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - db:/app/db
+
+volumes:
+  db:
